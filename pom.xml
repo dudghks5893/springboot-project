@@ -17,6 +17,13 @@
 		<java.version>11</java.version>
 	</properties>
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/com.auth0/java-jwt -->
+		<dependency>
+    		<groupId>com.auth0</groupId>
+    		<artifactId>java-jwt</artifactId>
+    		<version>3.10.2</version>
+		</dependency>
+		
 		<!-- 시큐리티 태그 라이브러리 -->
 		<dependency>
   			<groupId>org.springframework.security</groupId>
