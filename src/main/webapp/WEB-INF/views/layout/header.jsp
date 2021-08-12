@@ -35,7 +35,7 @@
 					<li class="nav-item"><a class="nav-link" href="joinForm">회원가입</a></li>
 				</ul>
 			</c:when>
-			<c:when test="${principal.user.role eq 'ADMIN'}">
+			<c:when test="${principal.user.role eq 'ROLE_ADMIN'}">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="/admin/products/saveForm">상품등록</a></li>
 					<li class="nav-item"><a class="nav-link" href="/admin/updateForm">회원정보</a></li>

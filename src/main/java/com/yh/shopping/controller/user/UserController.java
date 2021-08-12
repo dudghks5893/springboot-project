@@ -20,4 +20,5 @@ public class UserController {
 	public String updateForm() {
 		return "user/updateForm";
 	}
+	
 }

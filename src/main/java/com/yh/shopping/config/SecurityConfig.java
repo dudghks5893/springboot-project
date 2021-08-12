@@ -29,8 +29,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		http.csrf().disable();
 		http.authorizeRequests()
 			.antMatchers("/user/**").authenticated() // 인증만 되면 들어갈 수 있는 주소!!
-			.antMatchers("/manager/**").access("hasRole('ADMIN') or hasRole('MANAGER')")
-			.antMatchers("/admin/**").access("hasRole('ADMIN')")
+			.antMatchers("/manager/**").access("hasRole('ROLE_ADMIN') or hasRole('ROLE_MANAGER')")
+			.antMatchers("/admin/**").access("hasRole('ROLE_ADMIN')")
 			.anyRequest().permitAll() // 위 주소를 제외한 나머지는 로그인 없이 접근 가능
 			.and()
 			.formLogin()

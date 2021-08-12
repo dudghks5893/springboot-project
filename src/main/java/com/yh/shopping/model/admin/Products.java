@@ -1,4 +1,4 @@
-package com.yh.shopping.model;
+package com.yh.shopping.model.admin;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -19,6 +19,8 @@ import javax.persistence.OrderBy;
 import org.hibernate.annotations.CreationTimestamp;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.yh.shopping.model.Reviews;
+import com.yh.shopping.model.User;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,12 +40,16 @@ public class Products {
 	private int id; // 시퀀스
 	
 	@Column(nullable = false, length = 100)
-	private String title; // 제목
+	private String productName; // 상품이름
 	
 	@Lob
 	private String content; // 내용
 	
-	private String count; // 조회수
+	private int price; // 가격
+	
+	private int stock; // 재고
+	
+	private int count; // 조회수
 	
 	@CreationTimestamp
 	private Timestamp createDate; // 날짜
