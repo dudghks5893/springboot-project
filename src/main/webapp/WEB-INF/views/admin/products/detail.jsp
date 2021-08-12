@@ -23,7 +23,7 @@
 	</div>
 	<!-- 리뷰 영역 -->
 </div>
-<script src="/js/board.js"></script>
+<script src="/js/products.js"></script>
 <!-- 바디 끝 -->
 <!-- 푸터 -->
 <%@ include file="../../layout/footer.jsp"%>

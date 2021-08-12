@@ -40,7 +40,7 @@ let index = {
 		
 		$.ajax({
 			type:"DELETE",
-			url:"/api/board/"+id,
+			url:"/rest/products"+id,
 			dataType:"json"
 		}).done(function(resp){
 			alert("삭제가 완료되었습니다.");
@@ -61,7 +61,7 @@ let index = {
 		
 		$.ajax({
 			type:"PUT",
-			url:"/api/board/"+id,
+			url:"/rest/products"+id,
 			data:JSON.stringify(data), 
 			contentType:"application/json; charset=utf-8", 
 			dataType:"json"

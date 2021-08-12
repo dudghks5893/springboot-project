@@ -8,7 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 
+import com.yh.shopping.model.admin.Products;
 import com.yh.shopping.service.admin.ProductsService;
 
 @Controller
@@ -25,6 +27,7 @@ public class indexController {
 	
 	@GetMapping("/products/{id}")
 	public String findById(@PathVariable int id, Model model) {
+		productsService.조회수증가(id);
 		model.addAttribute("product", productsService.상품상세보기(id));
 		return "admin/products/detail";
 	}

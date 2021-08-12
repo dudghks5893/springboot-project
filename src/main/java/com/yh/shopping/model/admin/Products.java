@@ -49,7 +49,7 @@ public class Products {
 	
 	private int stock; // 재고
 	
-	private int count; // 조회수
+	private int hit; // 조회수
 	
 	@CreationTimestamp
 	private Timestamp createDate; // 날짜

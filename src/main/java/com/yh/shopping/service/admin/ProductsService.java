@@ -19,7 +19,7 @@ public class ProductsService {
 	
 	@Transactional
 	public void 상품등록(Products products, User user) {
-		products.setCount(0);
+		products.setHit(0);
 		products.setUser(user);
 		productsRepository.save(products);
 	}
@@ -29,13 +29,17 @@ public class ProductsService {
 		return productsRepository.findAll(pageable);
 	}
 	
+	@Transactional
+	public int 조회수증가(int id){
+		return productsRepository.updateHit(id);
+	}
+	
 	@Transactional(readOnly = true)
 	public Products 상품상세보기(int id){
 		Products products = productsRepository.findById(id)
 				.orElseThrow(()->{
 					return new IllegalArgumentException("상품 상세보기 실패 : 아이디를 찾을 수 없습니다.");
 				});
-		products.setCount(+1);
 		return products;
 	}
 	
