@@ -21,6 +21,7 @@
 		</div>
 	</form>
 	<button id="btn-save" class="btn btn-primary">회원가입</button>
+	<button id="btn-kakaopay" class="btn btn-primary">카카오페이</button>
 
 </div>
 
